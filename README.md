@@ -1,35 +1,61 @@
-# JorgeVegaFullStack
+# 🌐 Jorge Vega — Full Stack Developer Portfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+¡Hola! Soy **Jorge Vega Brenes**, un desarrollador Full Stack apasionado por crear experiencias web funcionales, modernas y con propósito.
 
-## Recommended IDE Setup
+Este portafolio fue creado como una carta de presentación digital, mostrando mis habilidades técnicas, estilo visual, y algunos de mis proyectos personales y colaborativos.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+---
 
-## Customize configuration
+## 🚀 Tecnologías utilizadas
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- **Framework:** Vue.js 3 + Vite
+- **CSS:** Tailwind CSS + Animaciones personalizadas
+- **EmailJS:** Para manejo de formularios con notificación directa al correo
+- **Deploy:** Vercel
 
-## Project Setup
+---
 
-```sh
-npm install
-```
+## 🎯 Secciones del sitio
 
-### Compile and Hot-Reload for Development
+- **Intro animada con fondo en video**
+- **Quién soy:** presentación personal
+- **Proyectos destacados:** con enlaces a demos y repos
+- **Contacto:** formulario con popup y animación moderna
 
-```sh
-npm run dev
-```
+---
 
-### Compile and Minify for Production
+## 📦 Proyectos destacados
 
-```sh
-npm run build
-```
+| Proyecto           | Descripción                                    | Demo / Código                                     |
+| ------------------ | ---------------------------------------------- | ------------------------------------------------- |
+| Anime View         | Visualizador de anime con Next.js + TypeScript | [Demo](https://animeview.vercel.app)              |
+| Grid Vue Test      | Test con Vue y CSS grid para SingularCover     | [Demo](https://grid-vue.vercel.app)               |
+| Next.js Docs Clone | Layout tipo documentación con Next.js          | [Demo](https://nextjs-docs-jorjoel777.vercel.app) |
 
-### Lint with [ESLint](https://eslint.org/)
+---
 
-```sh
-npm run lint
-```
+## 📬 Contacto
+
+- 📧 Email: [jorgevegb@outlook.com](mailto:jorgevegb@outlook.com)
+- 📱 WhatsApp: [+34 691430251](https://wa.me/34691430251)
+- 🌐 Sitio en vivo: próximamente en [Vercel](https://vercel.com/)
+
+---
+
+## 🧠 Notas adicionales
+
+> Este proyecto fue diseñado visualmente en Canva, luego reconstruido con Tailwind CSS y optimizado para diferentes dispositivos. Se usaron animaciones y tipografías personalizadas (`Jaturat`, `Clear Sans`) para mantener coherencia visual con el diseño original.
+
+---
+
+## ⚠️ Licencia de iconos
+
+> Icons made from [svg icons](https://www.onlinewebfonts.com/icon) is licensed by CC BY 4.0
+
+---
+
+## ✨ Créditos
+
+- Diseño: Jorge Vega + Canva
+- Desarrollo: Jorge Vega
+- IA Asistente: GWENesys ✨
