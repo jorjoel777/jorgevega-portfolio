@@ -1,16 +1,16 @@
 <template>
   <header class="relative w-full h-screen overflow-hidden text-white" id="home">
     <!-- 🎬 Background Video -->
-    <video
-      autoplay
-      muted
-      loop
-      playsinline
-      class="absolute top-0 left-0 w-full h-full object-cover z-0"
-    >
-      <source src="@/assets/images/jorgevegafullstack_wave.mp4" type="video/mp4" />
-      Your browser does not support HTML5 video.
-    </video>
+    <div class="absolute top-0 left-0 w-full h-full z-0 overflow-hidden">
+      <iframe
+        src="https://player.vimeo.com/video/1077353800?background=1&autoplay=1&loop=1&muted=1"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen
+        class="w-full h-full object-cover"
+      >
+      </iframe>
+    </div>
 
     <!-- 🔲 Overlay (Black transparent layer over video) -->
     <div class="absolute top-0 left-0 w-full h-full bg-opacity-40 z-0"></div>
