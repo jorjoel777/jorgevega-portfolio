@@ -25,15 +25,17 @@
     <div class="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
 
     <!-- 🎬 Background Video -->
-    <div id="video" class="absolute inset-0 overflow-hidden -z-10">
-      <iframe
-        src="https://player.vimeo.com/video/1077353800?background=1&autoplay=1&loop=1&muted=1"
-        frameborder="0"
-        allow="autoplay; fullscreen; picture-in-picture"
-        allowfullscreen
-        class="w-full h-full object-cover pointer-events-none"
-      ></iframe>
+    <div class="video-background">
+      <div class="video-foreground">
+      <!-- Youtube -->
+     <!-- <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe> -->
+
+     <!-- Vimeo -->
+      <iframe src="https://player.vimeo.com/video/1077353800?background=1" frameborder="0" allowfullscreen></iframe>
+
     </div>
+    </div>
+
   </header>
 </template>
 <script setup>
@@ -116,5 +118,52 @@ onBeforeUnmount(() => {
 
 .z-10 {
   z-index: 9999;
+}
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -99;
+}
+
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-foreground {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .video-foreground {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+.content {
+   padding: 25px;
+   background-color: rgba(#000, .3);
+   position: absolute;
+   right: 50px;
+   bottom: 50px;
+
+   h1 {
+      font-family: 'Roboto Slab', serif;
+      margin: 0;
+      color: #fff;
+   }
 }
 </style>

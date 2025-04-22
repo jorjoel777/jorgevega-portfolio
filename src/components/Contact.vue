@@ -52,7 +52,7 @@
         </a>
       </div>
 
-      <div class="flex flex-col space-y-4 py-4">
+      <div @click="showModal = true" class="flex flex-col space-y-4 py-4">
         <img
           src="@/assets/images/contactIcon3.svg"
           alt="Form Icon"
@@ -62,7 +62,7 @@
         <h3 class="text-yellow-300 font-semibold italic uppercase text-lg py-4">
           Send Me a Message
         </h3>
-        <button @click="showModal = true" class="text-cyan-300 hover:underline text-sm">
+        <button  class="text-cyan-300 hover:underline text-sm">
           Fill in the form
         </button>
       </div>
@@ -77,44 +77,18 @@
         <div
           class="bg-white text-black p-6 rounded-lg w-full max-w-md relative scale-95 transition-all duration-300"
         >
-          <button @click="closeModal" class="absolute top-2 right-2 text-black text-lg">✖</button>
+          <button aria-label="Close form modal" @click="closeModal" class="absolute top-2 right-2 text-black text-lg">✖</button>
           <h3 class="text-xl font-bold mb-4 text-center">Send Me a Message</h3>
 
-          <form @submit.prevent="handleSubmit(onSubmit)">
-            <input
-              v-model="name"
-              type="text"
-              placeholder="Name"
-              class="w-full py-4 p-2 border mb-6"
-            />
+          <form @submit.prevent="onSubmit">
+            <input v-model="name" type="text" placeholder="Name" class="w-full py-4 p-2 border mb-6"/>
             <span v-if="errors.name" class="text-red-500 py-6 text-sm">{{ errors.name }}</span>
-
-            <input
-              v-model="email"
-              type="email"
-              placeholder="Email"
-              class="w-full p-2 py-4 border mb-6"
-            />
-            <span v-if="errors.email" class="text-red-500 py-6 text-sm">{{ errors.email }}</span>
-
-            <textarea
-              v-model="message"
-              rows="4"
-              placeholder="Message"
-              class="w-full p-2 py-4 border mb-6"
-            ></textarea>
-            <span v-if="errors.message" class="text-red-500 py-6 text-sm">{{
-              errors.message
-            }}</span>
-
-            <button
-              type="submit"
-              class="bg-black text-white px-4 hover:bg-yellow-300 py-6 hover:text-black transition w-full"
-            >
-              Send
-            </button>
+            <input v-model="email" type="email" placeholder="Email" class="w-full py-4 p-2 border mb-6" />
+            <span v-if="errors.email" class="text-red-500 py-6 text-sm">{{ errors.email}}</span>
+            <textarea v-model="message" rows="4" placeholder="Message"  class="w-full py-4 p-2 border mb-6"></textarea>
+            <span v-if="errors.name" class="text-red-500 py-6 text-sm">{{ errors.message }}</span>
+            <button type="submit" class="bg-black text-white px-4 hover:bg-yellow-300 py-6 hover:text-black transition w-full">Send</button>
           </form>
-
           <div v-if="success" class="flex items-center justify-center gap-2 text-green-600 mt-4">
             <CheckCircle class="w-5 h-5" />
             <p>Message sent successfully!</p>
@@ -127,46 +101,46 @@
 
 <script setup>
 import { ref } from 'vue'
-import emailjs from 'emailjs-com'
+import emailjs from '@emailjs/browser'
 import { useForm, useField } from 'vee-validate'
 import * as yup from 'yup'
 import { CheckCircle } from 'lucide-vue-next'
 
-// Modal visibility
+// Visibilidad del modal y éxito
 const showModal = ref(false)
 const success = ref(false)
 
-// Vee-Validate schema
+// Esquema de validación con Yup
 const schema = yup.object({
   name: yup.string().required('Name is required'),
   email: yup.string().email('Invalid email').required('Email is required'),
   message: yup.string().required('Message is required'),
 })
 
-const { handleSubmit, errors } = useForm({ validationSchema: schema })
+// useForm y useField para controlar los campos y errores
+const { handleSubmit, errors } = useForm({
+  validationSchema: schema,
+})
+
 const { value: name } = useField('name')
 const { value: email } = useField('email')
 const { value: message } = useField('message')
 
+// Función para cerrar el modal
 const closeModal = () => {
   showModal.value = false
   success.value = false
 }
 
+// Función que se ejecuta al hacer submit
 const onSubmit = () => {
-  console.log('Sending:', name.value, email.value, message.value)
+  const templateParams = {
+    from_name: name.value,
+    from_email: email.value,
+    message: message.value,
+  }
 
-  emailjs
-    .send(
-      'service_s72ld9m',
-      'template_nn804jp',
-      {
-        from_name: name.value,
-        from_email: email.value,
-        message: message.value,
-      },
-      '2gF0IkwK0hxv0JiTU',
-    )
+  emailjs.send('service_s72ld9m', 'template_nn804jp', templateParams, '2gF0IkwK0hxv0JiTU')
     .then(() => {
       success.value = true
       setTimeout(() => {
@@ -177,10 +151,13 @@ const onSubmit = () => {
       }, 2500)
     })
     .catch((err) => {
-      console.error('Error sending email:', err)
+      console.error('EmailJS error:', err)
     })
 }
 </script>
+
+
+
 
 <style scoped>
 .fade-enter-active,
@@ -210,4 +187,32 @@ const onSubmit = () => {
   margin-top: 6px;
   margin-bottom: 6px;
 }
+
+
+@media screen and (min-width: 981px) and (max-width:1119) {
+    .h-full[data-v-c970699f] {
+        height: 100vh;
+        overflow: hidden;
+        top: 0;
+        width: 104% !important;
+    }
+}
+
+@media screen and (min-width: 1120px) and (max-width:1119) {
+    .h-full[data-v-c970699f] {
+        height: 175vh;
+        overflow: hidden;
+        top: 0;
+        width: 150%;
+    }
+}
+@media screen and (min-width: 1710px) {
+    .h-full[data-v-c970699f] {
+        height: 200vh;
+        overflow: hidden;
+        top: 0;
+        width: -webkit-fill-available;
+    }
+}
+
 </style>
