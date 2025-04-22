@@ -1,5 +1,5 @@
 <template>
-  <section class="relative w-full bg-black text-white px-6 sm:px-12 py-20">
+  <section  id="about" class="relative w-full bg-black text-white px-6 sm:px-12 py-20">
     <div
       class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 sd:grid-cols-1 items-center justify-center gap-2"
     >
@@ -26,7 +26,7 @@
           using popular frameworks like React and Vue, as well as integrating content-driven
           experiences through modern CMS platforms.
         </p>
-        <p class="text-gray-400 text-base italic">
+        <p  class="text-gray-400 text-base italic">
           Passionate about innovation, I believe in delivering code that communicates, connects, and
           grows with people.
         </p>

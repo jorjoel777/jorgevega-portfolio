@@ -7,6 +7,15 @@
       </div>
     </div>
 
+<!-- 🌐 Desktop Nav Links -->
+
+    <nav class="hidden sm:flex absolute top-24 left-40 z-50 space-x-6 text-white text-sm font-mono tracking-wide">
+      <a href="#about" class="hover:text-yellow-300 transition duration-200">About</a>
+      <a href="#projects" class="px-12 hover:text-yellow-300 transition duration-200">Projects</a>
+      <a href="#contact" class="hover:text-yellow-300 transition duration-200">Contact</a>
+    </nav>
+
+
     <!-- 💬 Hero Content -->
     <div id="maintitle" class="relative z-10 flex flex-col justify-end px-6 sm:px-40 pb-6 sm:pb-20">
       <h1
@@ -35,6 +44,26 @@
 
     </div>
     </div>
+    <div class="absolute bottom-6 w-full flex justify-center z-9999">
+      <button
+          @click="scrollToAbout"
+          class="focus:outline-none"
+          aria-label="Scroll to About"
+      >
+          <svg
+          width="68"
+          height="68"
+          viewBox="0 0 68 68"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="opacity-80 hover:opacity-100 transition"
+        >
+        <circle cx="24" cy="24" r="22" stroke="#00FF88" stroke-width="2" />
+        <path d="M16 20L24 28L32 20" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 26L24 34L32 26" stroke="#00FF88" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      </button>
+    </div>
 
   </header>
 </template>
@@ -54,19 +83,31 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('resize', setVh)
 })
+const scrollToAbout = () => {
+  const section = document.getElementById('about')
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' })
+  } else {
+    console.warn('Section with id="about" not found.')
+  }
+}
+
 </script>
 
 <style scoped>
+
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(-10px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
+
 .animate-fadeIn {
   animation: fadeIn 1s ease-out forwards;
 }

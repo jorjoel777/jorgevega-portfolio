@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-black w-full text-white px-6 sm:px-12 py-20" id="contact">
+  <section id="contact" class="bg-black w-full text-white px-6 sm:px-12 py-20">
     <div class="container max-w-7xl mx-auto gap-2">
       <h2 class="text-yellow-300 text-4xl sm:text-5xl font-bold uppercase tracking-wide italic">
         Let`s Connect
