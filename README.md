@@ -38,7 +38,7 @@ Este portafolio fue creado como una carta de presentación digital, mostrando mi
 
 - 📧 Email: [jorgevegb@outlook.com](mailto:jorgevegb@outlook.com)
 - 📱 WhatsApp: [+34 691430251](https://wa.me/34691430251)
-- 🌐 Sitio en vivo: próximamente en [Vercel](https://vercel.com/)
+- 🌐 Sitio en vivo: próximamente en [Vercel](https://jorgevegafullstack.vercel.app/)
 
 ---
 
