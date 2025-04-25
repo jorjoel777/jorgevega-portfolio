@@ -35,13 +35,13 @@
     <div class="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
 
     <!-- 🎬 Background Video -->
-    <div class="video-background">
-      <div class="video-foreground">
+    <div class="video-background" >
+      <div class="video-foreground" style="background-image: url('@/assets/images/bg_top_header.jpg'); background-size: cover; background-position: center;">
       <!-- Youtube -->
      <!-- <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe> -->
 
      <!-- Vimeo -->
-      <iframe src="https://player.vimeo.com/video/1077353800?background=1" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://player.vimeo.com/video/1077353800?background=1"   frameborder="0"   allowfullscreen  loading="lazy"></iframe>
 
     </div>
     </div>
@@ -162,8 +162,7 @@ const scrollToAbout = () => {
   z-index: 9999;
 }
 .video-background {
-  background: #000;
-  position: fixed;
+
   top: 0;
   right: 0;
   bottom: 0;
