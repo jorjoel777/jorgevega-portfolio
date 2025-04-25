@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import Header from './components/Header.vue'
 import About from './components/About.vue'
+import TechStack from './components/TechStack.vue'
 import Projects from './components/Projects.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
@@ -10,6 +11,7 @@ import Footer from './components/Footer.vue'
 <template>
   <Header />
   <About />
+  <TechStack />
   <Projects />
   <Contact />
   <Footer />
