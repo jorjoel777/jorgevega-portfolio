@@ -17,6 +17,10 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto py-20">
       <!-- Email -->
       <div class="flex flex-col space-y-4 py-4">
+        <a
+          href="mailto:jorgevegb@outlook.com"
+          class="text-white hover:underline break-all text-sm text-left"
+        >
         <img
           src="@/assets/images/contactIcon1.svg"
           alt="Email Icon"
@@ -26,16 +30,18 @@
         <h3 class="text-yellow-300 font-semibold italic uppercase text-lg py-4 text-left">
           Email Me
         </h3>
-        <a
-          href="mailto:jorgevegb@outlook.com"
-          class="text-white hover:underline break-all text-sm text-left"
-        >
+
           jorgevegb@outlook.com
         </a>
       </div>
 
       <!-- WhatsApp -->
       <div class="flex flex-col space-y-4 py-4">
+        <a
+          href="https://wa.me/34691430251"
+          target="_blank"
+          class="text-white hover:underline text-sm"
+        >
         <img
           src="@/assets/images/contactIcon2.svg"
           alt="WhatsApp Icon"
@@ -43,11 +49,7 @@
         />
         <div class="w-10 border-b-4 border-white"></div>
         <h3 class="text-yellow-300 font-semibold italic uppercase text-lg py-4">WhatsApp Me</h3>
-        <a
-          href="https://wa.me/34691430251"
-          target="_blank"
-          class="text-white hover:underline text-sm"
-        >
+
           (+34) 691 430 251
         </a>
       </div>
