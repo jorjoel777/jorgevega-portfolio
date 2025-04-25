@@ -10,10 +10,10 @@
 <!-- 🌐 Desktop Nav Links -->
 
     <nav class="hidden sm:flex absolute top-24 left-40 z-50 space-x-6 text-white text-sm font-mono tracking-wide">
-      <a href="#about" class="hover:text-yellow-300 transition duration-200">About</a>
-      <a href="#projects" class="px-12 hover:text-yellow-300 transition duration-200">Projects</a>
-      <a href="#techstack" class="px-12 hover:text-yellow-300 transition duration-200">Tech Stack</a>
-      <a href="#contact" class="hover:text-yellow-300 transition duration-200">Contact</a>
+      <a href="#about" class="px-6  hover:text-yellow-300 transition duration-200">About</a>
+      <a href="#projects" class="px-6 hover:text-yellow-300 transition duration-200">Projects</a>
+      <a href="#techstack" class="px-6 hover:text-yellow-300 transition duration-200">Tech Stack</a>
+      <a href="#contact" class="px-6 hover:text-yellow-300 transition duration-200">Contact</a>
     </nav>
 
 
