@@ -41,7 +41,7 @@
         />
 
         <a
-          href="/Jorge_Vega_Lead_Software_Engineer.pdf"
+          href="public\Jorge_Vega_Lead_Software_Engineer.pdf"
           download
           class="text-yellow-400 hover:text-cyan-400 text-xl font-semibold tracking-wide transition-colors duration-300"
         >
