@@ -39,7 +39,6 @@
       <div class="video-foreground" style="background-image: url('@/assets/images/bg_top_header.jpg'); background-size: cover; background-position: center;">
       <!-- Youtube -->
       <iframe src="https://www.youtube.com/embed/YXlJ7Mc5KXk?si=vjzIb6_qPUd-GCvX&a&autoplay=1&mute=1&controls=0&loop=1&playlist=W0LHTWG-UmQ" frameBorder="0"  allowFullScreen allow="autoplay"></iframe>
-
      <!-- Vimeo -->
      <!-- <iframe src="https://streamable.com/12xsb2?background=1&autoplay=1&loop=1"   frameborder="0"   allowfullscreen  loading="lazy"></iframe>  -->
 
