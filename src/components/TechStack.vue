@@ -1,5 +1,3 @@
-
-
 <template>
   <section class="bg-black w-full text-white px-6 sm:px-12 py-20" id="techstack">
     <div class="container max-w-7xl items-center justify-center mx-auto gap-2">
@@ -40,7 +38,7 @@
 <script setup>
 const tech = [
   {
-    title: 'Languages I speak',
+    title: 'Languages I Speak',
     description: 'Beyond syntax, these are my native tongues in code.',
     items: [
       'JavaScript (Node.js, Express)',
@@ -50,14 +48,24 @@ const tech = [
     ],
   },
   {
-    title: 'Frameworks & Libraries',
-    description: 'I build with what’s proven, scalable and powerful.',
-    items: ['Vue.js / React.js', 'Tailwind CSS', 'TensorFlow', 'OpenAI APIs'],
+    title: 'Frameworks & Cloud Tools',
+    description: 'I build scalable and modern apps using these tools.',
+    items: [
+      'Vue.js / React.js',
+      'Tailwind CSS',
+      'Firebase (Auth, Firestore, Functions)',
+      'Vercel (CI/CD + hosting)',
+    ],
   },
   {
-    title: 'Tools I use daily',
-    description: 'Where productivity, debugging and shipping happen.',
-    items: ['Git & GitHub', 'VS Code', 'Docker', 'Notion / Obsidian', 'Postman / Insomnia'],
+    title: 'AI / LLM Integration',
+    description: 'Powering intelligent interactions and assistants.',
+    items: [
+      'OpenRouter API (GPT-4o, Claude, Mixtral)',
+      'Prompt engineering & system design',
+      'Firestore chat/message storage',
+      'Custom chat workflows (with fallback logic)',
+    ],
   },
 ]
 </script>
